@@ -1,0 +1,15 @@
+pipeline{
+    agent{
+        node{
+            label 'Slave1'
+        }
+    }
+
+    stages{
+        stage('1. Show all variables'){
+            steps{
+             sh 'git --version'   
+            }
+        }
+    }
+}
